@@ -6,5 +6,5 @@ package model;
  * @param login
  * @param password
  */
-public record Idenntificationn(String id,  String login, String password) {
+public record Identificacao(String id, String login, String password) {
 }
