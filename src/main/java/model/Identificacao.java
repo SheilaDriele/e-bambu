@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Arrays;
+
 /**
  * Protótipo de identificação
  * @param id
@@ -7,9 +9,11 @@ package model;
  * @param password
  */
 public class Identificacao {
-        String id;
-        String login;
-        String password;
+        private String id;
+        private String login;
+        private String password;
+
+        private String[] logins = {"sheila", "flavio"};
 
     public Identificacao() {
     }
@@ -18,6 +22,10 @@ public class Identificacao {
         this.id = id;
         this.login = login;
         this.password = password;
+    }
+
+    public boolean login(){
+        return Arrays.stream(logins).anyMatch(l -> l.equalsIgnoreCase(login));
     }
 
     public String getId() {
