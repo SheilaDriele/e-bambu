@@ -4,6 +4,10 @@ import enumeradores.Genero;
 
 import java.time.LocalDate;
 
-public record DadosPessoais(String nome, LocalDate dataNascimento, Genero genero, String documento) {
-
+public class DadosPessoais {
+    private String nome;
+    private LocalDate dataNascimento;
+    private Genero genero;
+    private String documento;
 }
+
