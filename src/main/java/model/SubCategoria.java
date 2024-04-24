@@ -1,25 +1,15 @@
 package model;
 
 public class SubCategoria {
-    private Categoria categoria;
     private String nome;
     private String descricao;
 
     public SubCategoria() {
     }
 
-    public SubCategoria(Categoria categoria, String nome, String descricao) {
-        this.categoria = categoria;
+    public SubCategoria(String nome, String descricao) {
         this.nome = nome;
         this.descricao = descricao;
-    }
-
-    public Categoria getCategoria() {
-        return categoria;
-    }
-
-    public void setCategoria(Categoria categoria) {
-        this.categoria = categoria;
     }
 
     public String getNome() {
@@ -41,7 +31,6 @@ public class SubCategoria {
     @Override
     public String toString() {
         return "SubCategoria{" +
-                "categoria=" + categoria +
                 ", nome='" + nome + '\'' +
                 ", descricao='" + descricao + '\'' +
                 '}';
