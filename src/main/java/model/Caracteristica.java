@@ -1,16 +1,14 @@
 package model;
 
-import java.math.BigDecimal;
-
 public class Caracteristica {
    private String nome;
-   private BigDecimal valor;
+   private String valor;
    private String unidadeMedida;
 
     public Caracteristica() {
     }
 
-    public Caracteristica(String nome, BigDecimal valor, String unidadeMedida) {
+    public Caracteristica(String nome, String valor, String unidadeMedida) {
         this.nome = nome;
         this.valor = valor;
         this.unidadeMedida = unidadeMedida;
@@ -24,11 +22,11 @@ public class Caracteristica {
         this.nome = nome;
     }
 
-    public BigDecimal getValor() {
+    public String getValor() {
         return valor;
     }
 
-    public void setValor(BigDecimal valor) {
+    public void setValor(String valor) {
         this.valor = valor;
     }
 
