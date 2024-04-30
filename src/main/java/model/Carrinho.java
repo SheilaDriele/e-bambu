@@ -3,24 +3,24 @@ package model;
 import java.util.List;
 
 public class Carrinho {
-    private Cliente cliente;
+    private Pessoa pessoa;
     private List<ProdutoSelecionado> produtoSelecionados;
 
 
     public Carrinho() {
     }
 
-    public Carrinho(Cliente cliente, List<ProdutoSelecionado> produtoSelecionados) {
-        this.cliente = cliente;
+    public Carrinho(Pessoa pessoa, List<ProdutoSelecionado> produtoSelecionados) {
+        this.pessoa = pessoa;
         this.produtoSelecionados = produtoSelecionados;
     }
 
-    public Cliente getCliente() {
-        return cliente;
+    public Pessoa getCliente() {
+        return pessoa;
     }
 
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
+    public void setCliente(Pessoa pessoa) {
+        this.pessoa = pessoa;
     }
 
     public List<ProdutoSelecionado> getProdutoSelecionados() {
@@ -34,7 +34,7 @@ public class Carrinho {
     @Override
     public String toString() {
         return "Carrinho{" +
-                "cliente=" + cliente +
+                "cliente=" + pessoa +
                 ", produtoSelecionados=" + produtoSelecionados +
                 '}';
     }
