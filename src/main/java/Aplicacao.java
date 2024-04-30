@@ -1,9 +1,5 @@
-import enumeradores.Genero;
-import model.Cliente;
-import model.DadosPessoais;
 import model.Identificacao;
 
-import java.time.LocalDate;
 import java.util.Scanner;
 
 public class Aplicacao {

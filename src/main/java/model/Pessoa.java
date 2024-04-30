@@ -2,16 +2,16 @@ package model;
 
 import java.util.List;
 
-public class Cliente{
+public class Pessoa {
     private DadosPessoais dadosPessoais;
     private List<Endereco> enderecos;
     private List<Contato> contatos;
     private Identificacao identificacao;
 
-    public Cliente() {
+    public Pessoa() {
     }
 
-    public Cliente(DadosPessoais dadosPessoais, List<Endereco> enderecos, List<Contato> contatos, Identificacao identificacao) {
+    public Pessoa(DadosPessoais dadosPessoais, List<Endereco> enderecos, List<Contato> contatos, Identificacao identificacao) {
         this.dadosPessoais = dadosPessoais;
         this.enderecos = enderecos;
         this.contatos = contatos;
@@ -52,7 +52,7 @@ public class Cliente{
 
     @Override
     public String toString() {
-        return "Cliente{" +
+        return "Pessoa{" +
                 "dadosPessoais=" + dadosPessoais +
                 ", enderecos=" + enderecos +
                 ", contatos=" + contatos +
