@@ -16,12 +16,12 @@ public class OfertaEntity {
     @Column(name = "data_hora_inicial")
     private LocalDateTime dataHoraInicial;
     @ManyToOne
-    private Produto produto;
+    private ProdutoEntity produto;
 
     public OfertaEntity() {
     }
 
-    public OfertaEntity(Long id, BigDecimal valor, LocalDateTime dataHoraInicial, Produto produto) {
+    public OfertaEntity(Long id, BigDecimal valor, LocalDateTime dataHoraInicial, ProdutoEntity produto) {
         this.id = id;
         this.valor = valor;
         this.dataHoraInicial = dataHoraInicial;
@@ -52,11 +52,11 @@ public class OfertaEntity {
         this.dataHoraInicial = dataHoraInicial;
     }
 
-    public Produto getProduto() {
+    public ProdutoEntity getProduto() {
         return produto;
     }
 
-    public void setProduto(Produto produto) {
+    public void setProduto(ProdutoEntity produto) {
         this.produto = produto;
     }
 
