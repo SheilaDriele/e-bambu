@@ -1,6 +1,5 @@
 package com.sheiladev.ebambu.entity;
 
-import com.sheiladev.ebambu.enumeradores.Genero;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
@@ -14,13 +13,14 @@ public class DadosPessoaisEntity {
     private String nome;
     @Column(name = "data_nascimento")
     private LocalDate dataNascimento;
-    private Genero genero;
+    @ManyToOne
+    private GeneroEntity genero;
     private String documento;
 
     public DadosPessoaisEntity() {
     }
 
-    public DadosPessoaisEntity(Long id, String nome, LocalDate dataNascimento, Genero genero, String documento) {
+    public DadosPessoaisEntity(Long id, String nome, LocalDate dataNascimento, GeneroEntity genero, String documento) {
         this.id = id;
         this.nome = nome;
         this.dataNascimento = dataNascimento;
@@ -52,11 +52,11 @@ public class DadosPessoaisEntity {
         this.dataNascimento = dataNascimento;
     }
 
-    public Genero getGenero() {
+    public GeneroEntity getGenero() {
         return genero;
     }
 
-    public void setGenero(Genero genero) {
+    public void setGenero(GeneroEntity genero) {
         this.genero = genero;
     }
 

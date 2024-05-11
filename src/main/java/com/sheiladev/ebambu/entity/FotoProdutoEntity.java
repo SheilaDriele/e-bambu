@@ -11,12 +11,13 @@ public class FotoProdutoEntity {
     private Long id;
     private String endereco;
     private String descricao;
-    private Produto produto;
+    @ManyToOne
+    private ProdutoEntity produto;
 
     public FotoProdutoEntity() {
     }
 
-    public FotoProdutoEntity(Long id, String endereco, String descricao, Produto produto) {
+    public FotoProdutoEntity(Long id, String endereco, String descricao, ProdutoEntity produto) {
         this.id = id;
         this.endereco = endereco;
         this.descricao = descricao;
@@ -47,11 +48,11 @@ public class FotoProdutoEntity {
         this.descricao = descricao;
     }
 
-    public Produto getProduto() {
+    public ProdutoEntity getProduto() {
         return produto;
     }
 
-    public void setProduto(Produto produto) {
+    public void setProduto(ProdutoEntity produto) {
         this.produto = produto;
     }
 

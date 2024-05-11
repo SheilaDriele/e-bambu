@@ -9,12 +9,13 @@ public class EnderecoEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    @ManyToOne
     TipoEnderecoEntity tipo;
-    String logradouro;
-    String cep;
-    String numero;
-    String complemento;
-    String bairro;
+    private String logradouro;
+    private String cep;
+    private String numero;
+    private String complemento;
+    private String bairro;
 
     public EnderecoEntity() {
     }

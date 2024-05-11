@@ -12,11 +12,13 @@ public class PessoaEntity {
     @Id
     @GeneratedValue
     private Long id;
+    @OneToOne
     private DadosPessoaisEntity dadosPessoais;
     @OneToMany
     private List<EnderecoEntity> enderecos;
     @OneToMany
     private List<ContatoEntity> contatos;
+    @OneToOne
     private IdentificacaoEntity identificacao;
 
     public PessoaEntity() {
