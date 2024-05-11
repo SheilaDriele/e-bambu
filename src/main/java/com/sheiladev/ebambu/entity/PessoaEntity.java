@@ -1,8 +1,6 @@
 package com.sheiladev.ebambu.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 import java.util.List;
 
@@ -11,6 +9,9 @@ import java.util.List;
 @Entity
 @Table(name = "pessoa")
 public class PessoaEntity {
+    @Id
+    @GeneratedValue
+    private Long id;
     private DadosPessoaisEntity dadosPessoais;
     @OneToMany
     private List<EnderecoEntity> enderecos;
@@ -21,11 +22,20 @@ public class PessoaEntity {
     public PessoaEntity() {
     }
 
-    public PessoaEntity(DadosPessoaisEntity dadosPessoais, List<EnderecoEntity> enderecos, List<ContatoEntity> contatos, IdentificacaoEntity identificacao) {
+    public PessoaEntity(Long id, DadosPessoaisEntity dadosPessoais, List<EnderecoEntity> enderecos, List<ContatoEntity> contatos, IdentificacaoEntity identificacao) {
+        this.id = id;
         this.dadosPessoais = dadosPessoais;
         this.enderecos = enderecos;
         this.contatos = contatos;
         this.identificacao = identificacao;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public DadosPessoaisEntity getDadosPessoais() {
