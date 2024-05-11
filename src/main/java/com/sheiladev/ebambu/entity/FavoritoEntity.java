@@ -3,15 +3,16 @@ package com.sheiladev.ebambu.entity;
 import com.sheiladev.ebambu.model.Pessoa;
 import com.sheiladev.ebambu.model.Produto;
 import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "favorito")
 public class FavoritoEntity {
-    @OneToMany
+    @ManyToOne
     private PessoaEntity cliente;
-    @OneToMany
+    @ManyToOne
     private ProdutoEntity produto;
 
     public FavoritoEntity() {
