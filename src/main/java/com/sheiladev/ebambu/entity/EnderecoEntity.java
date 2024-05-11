@@ -1,12 +1,14 @@
 package com.sheiladev.ebambu.entity;
 
 import com.sheiladev.ebambu.enumeradores.TipoEndereco;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "endereco")
 public class EnderecoEntity {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
     TipoEnderecoEntity tipo;
     String logradouro;
     String cep;
@@ -17,13 +19,22 @@ public class EnderecoEntity {
     public EnderecoEntity() {
     }
 
-    public EnderecoEntity(TipoEnderecoEntity tipo, String logradouro, String cep, String numero, String complemento, String bairro) {
+    public EnderecoEntity(Long id, TipoEnderecoEntity tipo, String logradouro, String cep, String numero, String complemento, String bairro) {
+        this.id = id;
         this.tipo = tipo;
         this.logradouro = logradouro;
         this.cep = cep;
         this.numero = numero;
         this.complemento = complemento;
         this.bairro = bairro;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public TipoEnderecoEntity getTipo() {
@@ -77,7 +88,8 @@ public class EnderecoEntity {
     @Override
     public String toString() {
         return "EnderecoEntity{" +
-                "tipo=" + tipo +
+                "id=" + id +
+                ", tipo=" + tipo +
                 ", logradouro='" + logradouro + '\'' +
                 ", cep='" + cep + '\'' +
                 ", numero='" + numero + '\'' +
