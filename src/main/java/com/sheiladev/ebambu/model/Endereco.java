@@ -2,7 +2,8 @@ package com.sheiladev.ebambu.model;
 
 import com.sheiladev.ebambu.enumeradores.TipoEndereco;
 
-public class Endereco{TipoEndereco tipo;
+public class Endereco{
+    TipoEndereco tipo;
     String logradouro;
     String cep;
     String numero;
