@@ -17,4 +17,33 @@ public class CarrinhoEntity {
 
     public CarrinhoEntity() {
     }
+
+    public CarrinhoEntity(PessoaEntity pessoa, List<ProdutoSelecionadoEntity> produtoSelecionados) {
+        this.pessoa = pessoa;
+        this.produtoSelecionados = produtoSelecionados;
+    }
+
+    public PessoaEntity getPessoa() {
+        return pessoa;
+    }
+
+    public void setPessoa(PessoaEntity pessoa) {
+        this.pessoa = pessoa;
+    }
+
+    public List<ProdutoSelecionadoEntity> getProdutoSelecionados() {
+        return produtoSelecionados;
+    }
+
+    public void setProdutoSelecionados(List<ProdutoSelecionadoEntity> produtoSelecionados) {
+        this.produtoSelecionados = produtoSelecionados;
+    }
+
+    @Override
+    public String toString() {
+        return "CarrinhoEntity{" +
+                "pessoa=" + pessoa +
+                ", produtoSelecionados=" + produtoSelecionados +
+                '}';
+    }
 }
