@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 public class Promocao {
+    private Long id;
     private BigDecimal valor;
     private Oferta oferta;
     private LocalDateTime dataHoraInicio;
@@ -13,12 +14,21 @@ public class Promocao {
     public Promocao() {
     }
 
-    public Promocao(BigDecimal valor, Oferta oferta, LocalDateTime dataHoraInicio, LocalDateTime dataHoraFim, BigDecimal quantidade) {
+    public Promocao(Long id, BigDecimal valor, Oferta oferta, LocalDateTime dataHoraInicio, LocalDateTime dataHoraFim, BigDecimal quantidade) {
+        this.id = id;
         this.valor = valor;
         this.oferta = oferta;
         this.dataHoraInicio = dataHoraInicio;
         this.dataHoraFim = dataHoraFim;
         this.quantidade = quantidade;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public BigDecimal getValor() {
@@ -64,7 +74,8 @@ public class Promocao {
     @Override
     public String toString() {
         return "Promocao{" +
-                "valor=" + valor +
+                "id=" + id +
+                ", valor=" + valor +
                 ", oferta=" + oferta +
                 ", dataHoraInicio=" + dataHoraInicio +
                 ", dataHoraFim=" + dataHoraFim +

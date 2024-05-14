@@ -5,6 +5,7 @@ import com.sheiladev.ebambu.enumeradores.Genero;
 import java.time.LocalDate;
 
 public class DadosPessoais {
+    private Long id;
     private String nome;
     private LocalDate dataNascimento;
     private Genero genero;
@@ -13,11 +14,20 @@ public class DadosPessoais {
     public DadosPessoais() {
     }
 
-    public DadosPessoais(String nome, LocalDate dataNascimento, Genero genero, String documento) {
+    public DadosPessoais(Long id, String nome, LocalDate dataNascimento, Genero genero, String documento) {
+        this.id = id;
         this.nome = nome;
         this.dataNascimento = dataNascimento;
         this.genero = genero;
         this.documento = documento;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getNome() {
@@ -55,7 +65,8 @@ public class DadosPessoais {
     @Override
     public String toString() {
         return "DadosPessoais{" +
-                "nome='" + nome + '\'' +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
                 ", dataNascimento=" + dataNascimento +
                 ", genero=" + genero +
                 ", documento='" + documento + '\'' +

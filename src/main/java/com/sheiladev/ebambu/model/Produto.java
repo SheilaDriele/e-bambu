@@ -3,6 +3,7 @@ package com.sheiladev.ebambu.model;
 import java.util.List;
 
 public class Produto {
+    private Long id;
     private String codigo;
     private Categoria categoria;
     private SubCategoria subCategoria;
@@ -13,12 +14,21 @@ public class Produto {
     public Produto() {
     }
 
-    public Produto(String codigo, Categoria categoria, SubCategoria subCategoria, String descricao, List<Caracteristica> caracteristicas) {
+    public Produto(Long id, String codigo, Categoria categoria, SubCategoria subCategoria, String descricao, List<Caracteristica> caracteristicas) {
+        this.id = id;
         this.codigo = codigo;
         this.categoria = categoria;
         this.subCategoria = subCategoria;
         this.descricao = descricao;
         this.caracteristicas = caracteristicas;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getCodigo() {
@@ -64,7 +74,8 @@ public class Produto {
     @Override
     public String toString() {
         return "Produto{" +
-                "codigo='" + codigo + '\'' +
+                "id=" + id +
+                ", codigo='" + codigo + '\'' +
                 ", categoria=" + categoria +
                 ", subCategoria=" + subCategoria +
                 ", descricao='" + descricao + '\'' +

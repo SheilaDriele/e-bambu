@@ -1,15 +1,25 @@
 package com.sheiladev.ebambu.model;
 
 public class Favorito {
+    private Long id;
     private Pessoa cliente;
     private Produto produto;
 
     public Favorito() {
     }
 
-    public Favorito(Pessoa cliente, Produto produto) {
+    public Favorito(Long id, Pessoa cliente, Produto produto) {
+        this.id = id;
         this.cliente = cliente;
         this.produto = produto;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public Pessoa getCliente() {
@@ -31,7 +41,8 @@ public class Favorito {
     @Override
     public String toString() {
         return "Favorito{" +
-                "cliente=" + cliente +
+                "id=" + id +
+                ", cliente=" + cliente +
                 ", produto=" + produto +
                 '}';
     }

@@ -1,6 +1,7 @@
 package com.sheiladev.ebambu.model;
 
 public class FotoProduto {
+    private Long id;
     private String endereco;
     private String descricao;
     private Produto produto;
@@ -8,10 +9,19 @@ public class FotoProduto {
     public FotoProduto() {
     }
 
-    public FotoProduto(String endereco, String descricao, Produto produto) {
+    public FotoProduto(Long id, String endereco, String descricao, Produto produto) {
+        this.id = id;
         this.endereco = endereco;
         this.descricao = descricao;
         this.produto = produto;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getEndereco() {
@@ -41,7 +51,8 @@ public class FotoProduto {
     @Override
     public String toString() {
         return "FotoProduto{" +
-                "endereco='" + endereco + '\'' +
+                "id=" + id +
+                ", endereco='" + endereco + '\'' +
                 ", descricao='" + descricao + '\'' +
                 ", produto=" + produto +
                 '}';
