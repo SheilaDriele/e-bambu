@@ -9,7 +9,7 @@ public class EnderecoEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @ManyToOne
-    TipoEnderecoEntity tipo;
+    TipoEnderecoEntity tipoEndereco;
     private String logradouro;
     private String cep;
     private String numero;
@@ -21,7 +21,7 @@ public class EnderecoEntity {
 
     public EnderecoEntity(Long id, TipoEnderecoEntity tipo, String logradouro, String cep, String numero, String complemento, String bairro) {
         this.id = id;
-        this.tipo = tipo;
+        this.tipoEndereco = tipo;
         this.logradouro = logradouro;
         this.cep = cep;
         this.numero = numero;
@@ -37,12 +37,12 @@ public class EnderecoEntity {
         this.id = id;
     }
 
-    public TipoEnderecoEntity getTipo() {
-        return tipo;
+    public TipoEnderecoEntity getTipoEndereco() {
+        return tipoEndereco;
     }
 
-    public void setTipo(TipoEnderecoEntity tipo) {
-        this.tipo = tipo;
+    public void setTipoEndereco(TipoEnderecoEntity tipoEndereco) {
+        this.tipoEndereco = tipoEndereco;
     }
 
     public String getLogradouro() {
@@ -89,7 +89,7 @@ public class EnderecoEntity {
     public String toString() {
         return "EnderecoEntity{" +
                 "id=" + id +
-                ", tipo=" + tipo +
+                ", tipoEndereco=" + tipoEndereco +
                 ", logradouro='" + logradouro + '\'' +
                 ", cep='" + cep + '\'' +
                 ", numero='" + numero + '\'' +

@@ -8,7 +8,7 @@ public class FotoProdutoEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String endereco;
+    private String url;
     private String descricao;
     @ManyToOne
     private ProdutoEntity produto;
@@ -18,7 +18,7 @@ public class FotoProdutoEntity {
 
     public FotoProdutoEntity(Long id, String endereco, String descricao, ProdutoEntity produto) {
         this.id = id;
-        this.endereco = endereco;
+        this.url = endereco;
         this.descricao = descricao;
         this.produto = produto;
     }
@@ -31,12 +31,12 @@ public class FotoProdutoEntity {
         this.id = id;
     }
 
-    public String getEndereco() {
-        return endereco;
+    public String getUrl() {
+        return url;
     }
 
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
+    public void setUrl(String url) {
+        this.url = url;
     }
 
     public String getDescricao() {
@@ -58,7 +58,7 @@ public class FotoProdutoEntity {
     @Override
     public String toString() {
         return "FotoProduto{" +
-                "endereco='" + endereco + '\'' +
+                "url='" + url + '\'' +
                 ", descricao='" + descricao + '\'' +
                 ", produto=" + produto +
                 '}';
