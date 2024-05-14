@@ -1,9 +1,9 @@
 package com.sheiladev.ebambu.repository;
 
-import com.sheiladev.ebambu.entity.DadosPessoaisEntity;
+import com.sheiladev.ebambu.entity.ContatoEntity;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface DadosPessoaisRepository extends CrudRepository<DadosPessoaisEntity, Long> {
+public interface ContatoRepository extends CrudRepository<ContatoEntity, Long> {
 }
