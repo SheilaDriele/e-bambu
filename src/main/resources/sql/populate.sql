@@ -6,3 +6,10 @@ values
 ('TRABALHO'),
 ('OUTRO');
 
+INSERT INTO public.genero
+(nome)
+VALUES
+('MASCULINO'),
+('FEMININO'),
+('NAO INFORMADO');
+

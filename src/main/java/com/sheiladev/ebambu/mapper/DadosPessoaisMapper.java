@@ -11,7 +11,7 @@ public class DadosPessoaisMapper implements MapperInterface<DadosPessoaisEntity,
     public DadosPessoais fromEntityToModel(DadosPessoaisEntity entity) {
         return new DadosPessoais(entity.getNome(),
                 entity.getDataNascimento(),
-                Genero.get(entity.getId()),
+                Genero.get(entity.getGenero().getId()),
                 entity.getDocumento());
     }
 
