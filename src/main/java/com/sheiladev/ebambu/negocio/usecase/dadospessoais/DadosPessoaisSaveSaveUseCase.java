@@ -3,16 +3,16 @@ package com.sheiladev.ebambu.negocio.usecase.dadospessoais;
 import com.sheiladev.ebambu.entity.DadosPessoaisEntity;
 import com.sheiladev.ebambu.mapper.DadosPessoaisMapper;
 import com.sheiladev.ebambu.model.DadosPessoais;
-import com.sheiladev.ebambu.negocio.usecase.UseCase;
+import com.sheiladev.ebambu.negocio.usecase.SaveUseCase;
 import com.sheiladev.ebambu.repository.DadosPessoaisRepository;
 import org.springframework.stereotype.Service;
 
 @Service
-public class DadosPessoaisSaveUseCase implements UseCase<DadosPessoais> {
+public class DadosPessoaisSaveSaveUseCase implements SaveUseCase<DadosPessoais> {
 
     private final DadosPessoaisRepository repository;
 
-    public DadosPessoaisSaveUseCase(DadosPessoaisRepository repository) {
+    public DadosPessoaisSaveSaveUseCase(DadosPessoaisRepository repository) {
         this.repository = repository;
     }
 

@@ -10,11 +10,11 @@ import org.springframework.stereotype.Service;
 import java.util.Optional;
 
 @Service
-public class EnderecoFindById implements FindByIdUseCase<Endereco> {
+public class EnderecoFindByIdUseCase implements FindByIdUseCase<Endereco> {
 
     private final EnderecoRepository repository;
 
-    public EnderecoFindById(EnderecoRepository repository) {
+    public EnderecoFindByIdUseCase(EnderecoRepository repository) {
         this.repository = repository;
     }
 

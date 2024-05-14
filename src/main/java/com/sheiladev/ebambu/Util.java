@@ -22,7 +22,7 @@ public class Util {
     }
 
     public static Endereco getEnderecoValido() {
-        return new Endereco(TipoEndereco.RESIDENCIAL, "Rua de Residencia", "00000-000", "11975121212", "Casa 2", "bairro");
+        return new Endereco(null, TipoEndereco.RESIDENCIAL, "Rua de Residencia", "00000-000", "11975121212", "Casa 2", "bairro");
     }
 
     public static Contato getContatoValido() {

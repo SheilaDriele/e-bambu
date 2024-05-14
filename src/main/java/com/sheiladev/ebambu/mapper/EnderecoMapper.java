@@ -8,6 +8,7 @@ public class EnderecoMapper implements MapperInterface<EnderecoEntity, Endereco>
     public Endereco fromEntityToModel(EnderecoEntity entity) {
         TipoEnderecoMapper mapper = new TipoEnderecoMapper();
         return new Endereco(
+                entity.getId(),
                 mapper.fromEntityToModel(entity.getTipoEndereco()),
                 entity.getLogradouro(),
                 entity.getCep(),
