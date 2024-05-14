@@ -1,7 +1,7 @@
 package com.sheiladev.ebambu.controller;
 
 import com.sheiladev.ebambu.model.Endereco;
-import com.sheiladev.ebambu.negocio.usecase.EnderecoFindById;
+import com.sheiladev.ebambu.negocio.usecase.endereco.EnderecoFindById;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

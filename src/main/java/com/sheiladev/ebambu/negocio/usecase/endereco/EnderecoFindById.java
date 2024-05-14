@@ -1,8 +1,9 @@
-package com.sheiladev.ebambu.negocio.usecase;
+package com.sheiladev.ebambu.negocio.usecase.endereco;
 
 import com.sheiladev.ebambu.entity.EnderecoEntity;
 import com.sheiladev.ebambu.mapper.EnderecoMapper;
 import com.sheiladev.ebambu.model.Endereco;
+import com.sheiladev.ebambu.negocio.usecase.FindByIdUseCase;
 import com.sheiladev.ebambu.repository.EnderecoRepository;
 import org.springframework.stereotype.Service;
 
