@@ -3,6 +3,7 @@ package com.sheiladev.ebambu.model;
 import java.util.List;
 
 public class Carrinho {
+    private Long id;
     private Pessoa pessoa;
     private List<ProdutoSelecionado> produtoSelecionados;
 
@@ -10,16 +11,25 @@ public class Carrinho {
     public Carrinho() {
     }
 
-    public Carrinho(Pessoa pessoa, List<ProdutoSelecionado> produtoSelecionados) {
+    public Carrinho(Long id, Pessoa pessoa, List<ProdutoSelecionado> produtoSelecionados) {
+        this.id = id;
         this.pessoa = pessoa;
         this.produtoSelecionados = produtoSelecionados;
     }
 
-    public Pessoa getCliente() {
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Pessoa getPessoa() {
         return pessoa;
     }
 
-    public void setCliente(Pessoa pessoa) {
+    public void setPessoa(Pessoa pessoa) {
         this.pessoa = pessoa;
     }
 
@@ -34,7 +44,8 @@ public class Carrinho {
     @Override
     public String toString() {
         return "Carrinho{" +
-                "cliente=" + pessoa +
+                "id=" + id +
+                ", pessoa=" + pessoa +
                 ", produtoSelecionados=" + produtoSelecionados +
                 '}';
     }

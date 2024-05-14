@@ -10,7 +10,8 @@ import java.util.Arrays;
  * @param password
  */
 public class Identificacao {
-    private String id;
+    private Long id;
+    private String codigo;
     private String login;
     private String password;
 
@@ -19,22 +20,32 @@ public class Identificacao {
     public Identificacao() {
     }
 
-    public Identificacao(String id, String login, String password) {
+    public Identificacao(Long id, String codigo, String login, String password, String[] logins) {
         this.id = id;
+        this.codigo = codigo;
         this.login = login;
         this.password = password;
+        this.logins = logins;
     }
 
     public boolean login() {
         return Arrays.stream(logins).anyMatch(l -> l.equalsIgnoreCase(login));
     }
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
     }
 
     public String getLogin() {
@@ -56,9 +67,11 @@ public class Identificacao {
     @Override
     public String toString() {
         return "Identificacao{" +
-                "id='" + id + '\'' +
+                "id=" + id +
+                ", codigo='" + codigo + '\'' +
                 ", login='" + login + '\'' +
                 ", password='" + password + '\'' +
+                ", logins=" + Arrays.toString(logins) +
                 '}';
     }
 }

@@ -5,6 +5,7 @@ import com.sheiladev.ebambu.enumeradores.TipoDocumeto;
 import java.time.LocalDate;
 
 public class Documento {
+    private Long id;
     private TipoDocumeto tipo;
     private String numero;
     private LocalDate dataEmissao;
@@ -14,12 +15,21 @@ public class Documento {
     public Documento() {
     }
 
-    public Documento(TipoDocumeto tipo, String numero, LocalDate dataEmissao, String nacionalidade, String orgaoEmissor) {
+    public Documento(Long id, TipoDocumeto tipo, String numero, LocalDate dataEmissao, String nacionalidade, String orgaoEmissor) {
+        this.id = id;
         this.tipo = tipo;
         this.numero = numero;
         this.dataEmissao = dataEmissao;
         this.nacionalidade = nacionalidade;
         this.orgaoEmissor = orgaoEmissor;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public TipoDocumeto getTipo() {
@@ -65,7 +75,8 @@ public class Documento {
     @Override
     public String toString() {
         return "Documento{" +
-                "tipo=" + tipo +
+                "id=" + id +
+                ", tipo=" + tipo +
                 ", numero='" + numero + '\'' +
                 ", dataEmissao=" + dataEmissao +
                 ", nacionalidade='" + nacionalidade + '\'' +
