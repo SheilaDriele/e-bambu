@@ -1,5 +1,6 @@
 package com.sheiladev.ebambu.negocio.usecase.dadospessoais;
 
+import com.sheiladev.ebambu.entity.DadosPessoaisEntity;
 import com.sheiladev.ebambu.mapper.DadosPessoaisMapper;
 import com.sheiladev.ebambu.model.DadosPessoais;
 import com.sheiladev.ebambu.negocio.usecase.UseCase;
@@ -18,6 +19,7 @@ public class DadosPessoaisSaveUseCase implements UseCase<DadosPessoais> {
     @Override
     public DadosPessoais executar(DadosPessoais dadosPessoais) {
         DadosPessoaisMapper mapper = new DadosPessoaisMapper();
-        return repository.save(mapper.fromModelToEntity(dadosPessoais));
+        DadosPessoaisEntity retorno =  repository.save(mapper.fromModelToEntity(dadosPessoais));
+        return mapper.fromEntityToModel(retorno);
     }
 }
