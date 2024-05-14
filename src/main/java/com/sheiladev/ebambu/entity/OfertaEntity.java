@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 @Table(name = "oferta")
 public class OfertaEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private BigDecimal valor;
     @Column(name = "data_hora_inicial")

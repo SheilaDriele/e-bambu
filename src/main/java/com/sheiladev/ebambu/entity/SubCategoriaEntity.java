@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 @Table(name = "sub_categoria")
 public class SubCategoriaEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
     private String descricao;

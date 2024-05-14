@@ -8,7 +8,7 @@ import java.math.BigInteger;
 @Table(name = "produto_selecionado")
 public class ProdutoSelecionadoEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @ManyToOne
     private OfertaEntity oferta;

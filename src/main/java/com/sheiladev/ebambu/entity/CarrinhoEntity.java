@@ -8,7 +8,7 @@ import java.util.List;
 @Table(name = "carrinho")
 public class CarrinhoEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @OneToOne
     private PessoaEntity pessoa;
     @ManyToMany

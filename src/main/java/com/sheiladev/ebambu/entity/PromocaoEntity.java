@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 @Table(name = "promocao")
 public class PromocaoEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private BigDecimal valor;
     @ManyToOne

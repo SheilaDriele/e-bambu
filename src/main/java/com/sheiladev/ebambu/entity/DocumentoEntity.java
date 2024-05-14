@@ -8,7 +8,7 @@ import java.time.LocalDate;
 @Table(name = "Documento")
 public class DocumentoEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @ManyToOne
     private TipoDocumentoEntity tipo;
