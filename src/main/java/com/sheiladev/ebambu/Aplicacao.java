@@ -22,7 +22,7 @@ public class Aplicacao {
 
         if (identificacao.login()) {
             System.out.println("Login realizado com sucesso!");
-        }else {
+        } else {
             System.out.println("Usuario invalido");
         }
     }

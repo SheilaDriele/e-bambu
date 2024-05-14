@@ -20,7 +20,7 @@ public class EnderecoFindById implements FindByIdUseCase<Endereco> {
     @Override
     public Optional<Endereco> executar(Long id) {
         EnderecoMapper mapper = new EnderecoMapper();
-        Optional<EnderecoEntity> optional =  repository.findById(id);
+        Optional<EnderecoEntity> optional = repository.findById(id);
         return optional.map(o -> mapper.fromEntityToModel(optional.get()));
     }
 }

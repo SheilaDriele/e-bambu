@@ -1,6 +1,6 @@
 package com.sheiladev.ebambu.mapper;
 
-public interface MapperInterface<T,K> {
+public interface MapperInterface<T, K> {
 
     K fromEntityToModel(T entity);
 

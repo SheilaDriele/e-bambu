@@ -3,9 +3,9 @@ package com.sheiladev.ebambu.model;
 import java.math.BigInteger;
 
 public class ProdutoSelecionado {
-        private Oferta oferta;
-        private Promocao promocao;
-        private BigInteger quantidade;
+    private Oferta oferta;
+    private Promocao promocao;
+    private BigInteger quantidade;
 
     public ProdutoSelecionado() {
     }

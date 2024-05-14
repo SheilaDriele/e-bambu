@@ -1,6 +1,5 @@
 package com.sheiladev.ebambu.entity;
 
-import com.sheiladev.ebambu.enumeradores.TipoEndereco;
 import jakarta.persistence.*;
 
 @Entity

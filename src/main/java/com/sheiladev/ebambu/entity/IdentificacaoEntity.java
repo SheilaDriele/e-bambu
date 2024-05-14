@@ -5,12 +5,12 @@ import jakarta.persistence.*;
 @Entity
 @Table(name = "identificacao")
 public class IdentificacaoEntity {
-        @Id
-        @GeneratedValue(strategy = GenerationType.AUTO)
-        private Long id;
-        private String codigo;
-        private String login;
-        private String password;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+    private String codigo;
+    private String login;
+    private String password;
 
     public IdentificacaoEntity() {
     }

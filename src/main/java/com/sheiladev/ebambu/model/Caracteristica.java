@@ -1,9 +1,9 @@
 package com.sheiladev.ebambu.model;
 
 public class Caracteristica {
-   private String nome;
-   private String valor;
-   private String unidadeMedida;
+    private String nome;
+    private String valor;
+    private String unidadeMedida;
 
     public Caracteristica() {
     }

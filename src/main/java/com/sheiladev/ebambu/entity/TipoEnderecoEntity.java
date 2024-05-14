@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 @Table(name = "tipo_endereco")
 public class TipoEnderecoEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
 

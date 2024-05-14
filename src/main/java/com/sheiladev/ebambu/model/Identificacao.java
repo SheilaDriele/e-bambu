@@ -4,16 +4,17 @@ import java.util.Arrays;
 
 /**
  * Protótipo de identificação
+ *
  * @param id
  * @param login
  * @param password
  */
 public class Identificacao {
-        private String id;
-        private String login;
-        private String password;
+    private String id;
+    private String login;
+    private String password;
 
-        private String[] logins = {"sheila", "flavio"};
+    private String[] logins = {"sheila", "flavio"};
 
     public Identificacao() {
     }
@@ -24,7 +25,7 @@ public class Identificacao {
         this.password = password;
     }
 
-    public boolean login(){
+    public boolean login() {
         return Arrays.stream(logins).anyMatch(l -> l.equalsIgnoreCase(login));
     }
 

@@ -2,7 +2,7 @@ package com.sheiladev.ebambu.model;
 
 import com.sheiladev.ebambu.enumeradores.TipoContato;
 
-public class Contato{
+public class Contato {
     private TipoContato tipo;
     private String valor;
 

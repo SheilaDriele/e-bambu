@@ -4,7 +4,7 @@ import com.sheiladev.ebambu.enumeradores.TipoDocumeto;
 
 import java.time.LocalDate;
 
-public class Documento{
+public class Documento {
     private TipoDocumeto tipo;
     private String numero;
     private LocalDate dataEmissao;

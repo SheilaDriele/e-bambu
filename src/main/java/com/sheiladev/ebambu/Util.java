@@ -9,7 +9,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 public class Util {
-    public static Pessoa getClienteValido(){
+    public static Pessoa getClienteValido() {
         return new Pessoa(getDadosPessoaisValidos(), List.of(getEnderecoValido()), List.of(getContatoValido()), getIdentificacaoValidos());
     }
 
@@ -21,11 +21,11 @@ public class Util {
         return new Identificacao("xpto", "flavio", "senha");
     }
 
-    public static Endereco getEnderecoValido(){
+    public static Endereco getEnderecoValido() {
         return new Endereco(TipoEndereco.RESIDENCIAL, "Rua de Residencia", "00000-000", "11975121212", "Casa 2", "bairro");
     }
 
-    public static Contato getContatoValido(){
+    public static Contato getContatoValido() {
         return new Contato(TipoContato.EMAIL, "email@provedor.com.br");
     }
 }

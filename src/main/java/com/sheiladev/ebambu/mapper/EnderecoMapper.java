@@ -1,7 +1,6 @@
 package com.sheiladev.ebambu.mapper;
 
 import com.sheiladev.ebambu.entity.EnderecoEntity;
-import com.sheiladev.ebambu.enumeradores.TipoEndereco;
 import com.sheiladev.ebambu.model.Endereco;
 
 public class EnderecoMapper implements MapperInterface<EnderecoEntity, Endereco> {

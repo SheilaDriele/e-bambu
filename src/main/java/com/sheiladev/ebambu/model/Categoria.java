@@ -1,8 +1,8 @@
 package com.sheiladev.ebambu.model;
 
 public class Categoria {
-  private String nome;
-  private String descricao;
+    private String nome;
+    private String descricao;
 
     public Categoria() {
     }

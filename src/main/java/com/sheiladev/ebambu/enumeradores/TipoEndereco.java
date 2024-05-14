@@ -14,8 +14,7 @@ public enum TipoEndereco {
         this.nome = nome;
     }
 
-    public static TipoEndereco get(Long id)
-    {
+    public static TipoEndereco get(Long id) {
         return switch (id.intValue()) {
             case 1 -> TipoEndereco.RESIDENCIAL;
             case 2 -> TipoEndereco.COMERCIAL;
@@ -25,7 +24,7 @@ public enum TipoEndereco {
         };
     }
 
-    public Long getId(){
+    public Long getId() {
         return this.id;
     }
 
