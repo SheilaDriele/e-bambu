@@ -9,7 +9,9 @@ public class DadosPessoaisMapper implements MapperInterface<DadosPessoaisEntity,
 
     @Override
     public DadosPessoais fromEntityToModel(DadosPessoaisEntity entity) {
-        return new DadosPessoais(entity.getNome(),
+        return new DadosPessoais(
+                entity.getId(),
+                entity.getNome(),
                 entity.getDataNascimento(),
                 Genero.get(entity.getGenero().getId()),
                 entity.getDocumento());

@@ -10,15 +10,15 @@ import java.util.List;
 
 public class Util {
     public static Pessoa getClienteValido() {
-        return new Pessoa(getDadosPessoaisValidos(), List.of(getEnderecoValido()), List.of(getContatoValido()), getIdentificacaoValidos());
+        return new Pessoa(null, getDadosPessoaisValidos(), List.of(getEnderecoValido()), List.of(getContatoValido()), getIdentificacaoValidos());
     }
 
     private static DadosPessoais getDadosPessoaisValidos() {
-        return new DadosPessoais("Flavio", LocalDate.now(), Genero.MASCULINO, null);
+        return new DadosPessoais(null, "Flavio", LocalDate.now(), Genero.MASCULINO, null);
     }
 
     private static Identificacao getIdentificacaoValidos() {
-        return new Identificacao("xpto", "flavio", "senha");
+        return new Identificacao(null, "xpto", "flavio", "senha");
     }
 
     public static Endereco getEnderecoValido() {
@@ -26,6 +26,6 @@ public class Util {
     }
 
     public static Contato getContatoValido() {
-        return new Contato(TipoContato.EMAIL, "email@provedor.com.br");
+        return new Contato(null,TipoContato.EMAIL, "email@provedor.com.br");
     }
 }

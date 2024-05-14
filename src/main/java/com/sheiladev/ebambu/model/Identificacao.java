@@ -2,30 +2,22 @@ package com.sheiladev.ebambu.model;
 
 import java.util.Arrays;
 
-/**
- * Protótipo de identificação
- *
- * @param id
- * @param login
- * @param password
- */
 public class Identificacao {
     private Long id;
     private String codigo;
     private String login;
     private String password;
 
-    private String[] logins = {"sheila", "flavio"};
+    private String[] logins = {"sheila", "flavio"}; // todo - remover depois
 
     public Identificacao() {
     }
 
-    public Identificacao(Long id, String codigo, String login, String password, String[] logins) {
+    public Identificacao(Long id, String codigo, String login, String password) {
         this.id = id;
         this.codigo = codigo;
         this.login = login;
         this.password = password;
-        this.logins = logins;
     }
 
     public boolean login() {
@@ -71,7 +63,6 @@ public class Identificacao {
                 ", codigo='" + codigo + '\'' +
                 ", login='" + login + '\'' +
                 ", password='" + password + '\'' +
-                ", logins=" + Arrays.toString(logins) +
                 '}';
     }
 }
